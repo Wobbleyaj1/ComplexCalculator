@@ -1,0 +1,10 @@
+*.exe
+*.mod
+*.dll
+*.o
+*.so
+node_modules/
+.vs/
+bin/
+obj/
+.DS_Store
