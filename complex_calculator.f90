@@ -57,9 +57,9 @@ program complexCalculator
         end do
 
         ! Request operands based on operation
-        if (op_code >= 1 .and. op_code <= 5) then
+        if (op_code >= 1 .and. op_code <= 4) then
 
-            ! Binary operations need two operands
+            ! Binary operations (1-4) need two operands
             write (*, *) ''
             write (*, '(A)', advance='no') 'Enter first complex number: '
             read (*, '(A)') input1
@@ -72,9 +72,9 @@ program complexCalculator
 
             var2 = parse_complex(input2)
 
-        else if (op_code == 6) then
+        else if (op_code == 5 .or. op_code == 6) then
 
-            ! Conjugate only needs one operand
+            ! Unary operations (power, conjugate) need one operand
             write (*, *) ''
             write (*, '(A)', advance='no') 'Enter complex number: '
             read (*, '(A)') input1
